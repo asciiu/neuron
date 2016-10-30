@@ -17,6 +17,7 @@ object Example {
       // generate 0 or 1
       val a = Random.nextInt(2)
       val b = Random.nextInt(2)
+      // AND principle
       val target = if (a == b && a != 0) 1.0 else 0.0
 
       allInputs.append(Array(a, b))

@@ -95,7 +95,7 @@ class NeuralNet(val typology: Array[Int]) {
       val layer = layers(layerNum)
       val previousLayer = layers(layerNum-1)
 
-      // update weights for each neuron
+      // update weights for each neuron in layer
       for (n <- 0 until layer.neurons.length - 1) {
         layer.neurons(n).updateInputWeights(previousLayer)
       }
@@ -107,6 +107,7 @@ class NeuralNet(val typology: Array[Int]) {
     val results = ArrayBuffer[Double]()
     val lastLayer = layers.last
 
+    // we don't care about the last bias neuron in the last layer
     for (n <- 0 until lastLayer.neurons.length - 1) {
       results.append(lastLayer.neurons(n).outputValue)
     }
