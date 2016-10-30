@@ -1,7 +1,7 @@
 import org.scalatest._
 
-class HelloSpec extends FlatSpec with Matchers {
-  "Hello" should "have tests" in {
+class NeuralNetSpec extends FlatSpec with Matchers {
+  "NeuralNet" should "create" in {
     true should === (true)
   }
 }
